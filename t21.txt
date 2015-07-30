@@ -1,0 +1,17 @@
+# Source        Destination     Capacity
+# ------        -----------     ----
+David       Charles             10Mbps
+David           Blake           100Mbps
+Albert          Blake           10Mbps
+Albert          Charles         100Mbps
+Blake           Charles         100Mbps
+# Time  Source  Destination     Capacity
+# ----  ------  -----------     ----
+0               Albert          David                   FBR             70Mbps  3sec
+0               Albert          David                   ABR             1Gb
+1               Albert          David                   VBR-RT  30Mbps
+1               David           Albert                  FBR             70Mbps  3sec
+2               Albert          David                   VBR-RT  20Mbps
+2               David           Albert                  VBR             10Mbps
+3               Charles         Blake                   FBR             100Mbps 2sec
+3               David           Albert                  VBR             40Mbps

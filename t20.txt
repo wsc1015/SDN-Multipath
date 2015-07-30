@@ -1,0 +1,13 @@
+# Source        Destination     Capacity(in Tbps/Gbps/Mbps/Kbps)
+# ------        -----------     ----
+v4          v3                  1Gbps
+v4                      v2                      10Gbps
+v1                      v2                      1Gbps
+v1                      v3                      10Gbps
+v2                      v3                      10Gbps
+# Time  Source  Destination     Capacity
+# ----  ------  -----------     ----
+0               v1              v4                      FBR             8Gbps   3sec
+0               v1              v4                      ABR             20Gb
+1               v1              v4                      VBR-RT  3Gbps
+2               v1              v4                      VBR-RT  2Gbps
